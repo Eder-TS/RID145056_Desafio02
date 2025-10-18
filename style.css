@@ -1,0 +1,253 @@
+html {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #02A28F;
+    font-size: 3.6rem;
+    font-weight: bold;
+    padding: 1.5rem 0;
+}
+
+nav > div > a {
+    text-decoration: none;
+    color: white;
+}
+
+.aligned {
+    max-width: 112.9rem;
+    margin: auto;
+}
+
+#body_container {
+    display: grid;
+    gap: 2.4rem;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 5rem;
+}
+
+#grid_container {
+    display: grid;
+    gap: 2.4rem;
+}
+
+.no_decoration {
+    text-decoration: none;
+    color: #000;
+}
+
+#grid_container > a > main {
+    color: white;
+    width: 74.4rem;
+    height: 39rem;
+    background-image: /*linear-gradient(to top, #000, transparent)*/
+        linear-gradient(0deg,rgba(2, 2, 3, 0.97) 0%, rgba(32, 32, 32, 0.8) 30%, rgba(209, 141, 141, 0.11) 100%),
+        url(./assets/main.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    background-position: bottom, center;
+}
+
+#grid_container > a > main > header {
+    box-sizing: border-box;
+    width: 95%;
+    position: relative;
+    top: 29rem;
+    left: 2.4rem;
+}
+
+#grid_container > a > main > header > p {
+    font-size: 1.6rem;
+    margin: 0px;
+}
+
+h1 {
+    font-size: 3.2rem;
+    margin: 0px;
+}
+
+#recents_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #02A28F;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.6rem 2.4rem;
+    border-radius: 0.8rem;
+    margin-bottom: 1.2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+#recents_header > a {
+    font-size: 1.4rem;
+    color: white;
+}
+
+#recents_cards {
+    display: grid;
+    gap: 2.4rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 36rem;
+    height: 39.6rem;
+    font-size: 1.4rem;
+    font-weight: normal;
+    border-radius: 1.6rem;
+    box-shadow: 0px 0px 1rem rgb(215, 213, 213);
+}
+
+.card > img {
+    display: block;
+    border-radius: 1.6rem 1.6rem 0 0;
+}
+
+.card_body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 0 1.5rem 0.8rem 1.5rem;
+}
+
+.card h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.7rem 0;
+}
+
+.card p {
+    margin: 0;
+}
+
+.card_body > div {
+    flex: 1;
+    justify-content: space-between;
+}
+
+.card > .card_body > div > header > :first-child {
+    color: #02A28F;
+    padding-top: 1.2rem;
+}
+
+.card_body > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.card_content {
+    flex: 1;
+    margin-top: 0;
+    padding-top: 0.7rem
+}
+
+.card_body > time {
+    padding-top: 1rem;
+    color: #616161;
+}
+
+#right_column {
+    display: grid;
+    gap: 2.4rem;
+    grid-template-rows: 39rem 1fr;
+}
+
+#right_column > section > header {
+    background-color: #02A28F;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.2rem 2.4rem;
+    border-radius: 0.8rem;
+    margin-bottom: 1.4rem;
+}
+
+#pop {
+    display: flex;
+    flex-direction: column;
+}
+
+#pop > div {
+    flex: 1;
+    display: grid;
+    gap: 1.4rem;
+    grid-template-rows: repeat(3, 1fr);
+
+}
+
+.micro_card {
+    display: flex;
+    flex-direction: row;
+    padding: 1.2rem;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem rgb(227, 226, 226);
+}
+
+.micro_card > div {
+    padding-left: 1.2rem;
+}
+
+.micro_card > div > h4 {
+    font-size: 1.4rem;
+    margin: 0 0 1rem 0;
+}
+
+.micro_card > div > time {
+    color: #616161;
+    font-size: 1.4rem;
+}
+
+#categories > ul {
+    display: flex;
+    flex-direction: column;
+    margin-block-start: 2rem;
+    padding-inline-start: 0;
+    list-style: none
+}
+
+#categories > ul > li {
+    padding: 0.7rem 0;
+}
+
+#categories > ul > li:first-child {
+    padding-top: 0;
+}
+
+#categories > ul > li > a{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #616161;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 6.5rem;
+    background-color: #02A28F;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: white;
+}

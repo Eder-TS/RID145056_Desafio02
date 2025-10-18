@@ -1,125 +1,174 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Dev News</title>
-</head>
-<body>
-    <nav class="container">
-        <a href="">The Dev News</a>
-    </nav>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Dev News</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+            <div class="aligned">
+                <a href="">The Dev News</a>
+            </div>           
+        </nav>
 
-    <div class="container">
-        <main>
-            <img src="./assets/main.svg" alt="cidade">
-            <header>
-                <p>Opinião</p>
-                <h1>Como é ser um desenvolvedor</h1>
-                <p>By Fabio Tetsuo</p>
-            </header>
-        </main>
+        <div id="body_container" class="aligned">
+            <div id="grid_container">
+                <a href="" class="no_decoration">
+                    <main>
+                        <header>
+                            <p>opinião</p>
+                            <h1>Como é ser um desenvolvedor</h1>
+                            <p><strong>By</strong> Fabio Tetsuo</p>
+                        </header>
+                    </main>
+                </a>
 
-        <section id="recents">
-            <header>
-                <h2>Posts mais recentes</h2>
-                <a href="">Ver todos</a>
-            </header>
-
-            <div id="recents_cards">
-                <div class="card item_1">
-                    <img src="./assets/mobile.svg" alt="Smartphone">
-                    <header>
-                        <p>desenvolvimento</p>
-                        <h3>Desenvolvimento mobile</h3>
-                        <p>By Fabio Tetsuo</p>
+                <section id="recents">
+                    <header id="recents_header">
+                        <h2>Posts mais recentes</h2>
+                        <a href="">Ver todos</a>
                     </header>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur. In vitae urna commodo amet congue integer dapibus. Interdum semper mauris convallis fusce enim odio. Vitae montes ridiculus felis.
-                    </p>
-                    <time>22 Agosto 2022</time>
-                </div>
 
-                <div class="card item_2">
-                    <img src="./assets/balance.svg" alt="Gravação">
+                    <div id="recents_cards">
+                        <a href="" class="no_decoration">
+                            <div class="card">
+                                <img src="./assets/mobile.svg" alt="Smartphone">
+                                <div class="card_body">
+                                    <div>
+                                        <header>
+                                            <p>desenvolvimento</p>
+                                            <h3>Desenvolvimento mobile</h3>
+                                            <p><strong>By</strong> Fabio Tetsuo</p>
+                                        </header>
+                                        <p class="card_content">
+                                            Lorem ipsum dolor sit amet consectetur. In vitae urna commodo amet congue integer dapibus. Interdum semper mauris convallis fusce enim odio. Vitae montes ridiculus felis.
+                                        </p>
+                                    </div>
+                                    <time>22 Agosto 2022</time>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="" class="no_decoration">
+                            <div class="card">
+                                <img src="./assets/balance.svg" alt="Gravação">
+                                <div class="card_body">
+                                    <div>
+                                        <header>
+                                            <p>saúde</p>
+                                            <h3>Balancear vida profissional e pessoal</h3>
+                                            <p><strong>By</strong> Ridho Satriawan</p>
+                                        </header>
+                                        <p class="card_content">
+                                            Lorem ipsum dolor sit amet consectetur. Et consectetur at consectetur sed nisl tempor.
+                                        </p>
+                                    </div>
+                                    <time>22 Agosto 2022</time>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="" class="no_decoration">
+                            <div class="card">
+                                <img src="./assets/code.svg" alt="Tela de computador">
+                                <div class="card_body">
+                                    <div>
+                                        <header>
+                                            <p>desenvolvimento</p>
+                                            <h3>Configurando VSCode</h3>
+                                            <p><strong>By</strong> Fabio Tetsuo</p>
+                                        </header>
+                                        <p class="card_content">
+                                            Lorem ipsum dolor sit amet consectetur. Erat interdum tortor ac sagittis id a etiam. Tellus vitae arcu dignissim massa aliquam vel tellus. Ipsum massa arcu nulla sed purus in ac.
+                                        </p>
+                                    </div>
+                                    <time>22 Agosto 2022</time>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="" class="no_decoration">
+                            <div class="card">
+                                <img src="./assets/ultrawide.svg" alt="Várias telas de computador">
+                                <div class="card_body">
+                                    <div>
+                                        <header>
+                                            <p>produtividade</p>
+                                            <h3>2 monitores ou 1 ultrawide?</h3>
+                                            <p><strong>By</strong> Fulano da Silva</p>
+                                        </header>
+                                        <p class="card_content">
+                                            Lorem ipsum dolor sit amet consectetur. Arcu tellus adipiscing sagittis tristique. Eget molestie posuere enim pretium venenatis nunc ligula donec a. Velit senectus amet nulla.
+                                        </p>
+                                    </div>
+                                    <time>22 Agosto 2022</time>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>        
+            </div>
+
+            <div id="right_column">
+                <section id="pop">
                     <header>
-                        <p>saúde</p>
-                        <h3>Balancear vida profissional e pessoal</h3>
-                        <p>By Ridho Satriawan</p>
+                        <h2>Posts populares</h2>
                     </header>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur. Et consectetur at consectetur sed nisl tempor.
-                    </p>
-                    <time>22 Agosto 2022</time>
-                </div>
 
-                <div class="card item_3">
-                    <img src="./assets/code.svg" alt="Tela de computador">
+                    <div>
+                        <a href="" class="no_decoration">
+                            <div class="micro_card">
+                                <img src="./assets/development.svg" alt="Pessoa no desktop">
+                                <div>
+                                    <h4>Desevolvimento atual</h4>
+                                    <time>22 Agosto 2022</time>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="" class="no_decoration">
+                            <div class="micro_card">
+                                <img src="./assets/git.svg" alt="Logo GitLab">
+                                <div>
+                                    <h4>GitLab vs GitHub</h4>
+                                    <time>22 Agosto 2022</time>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="" class="no_decoration">
+                            <div class="micro_card">
+                                <img src="./assets/coffee.svg" alt="Café">
+                                <div>
+                                    <h4>Café atrapalha?</h4>
+                                    <time>22 Agosto 2022</time>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <section id="categories">
                     <header>
-                        <p>desenvolvimento</p>
-                        <h3>Configurando VSCode</h3>
-                        <p>By Fabio Tetsuo</p>
+                        <h2>Categorias</h2>
                     </header>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur. Erat interdum tortor ac sagittis id a etiam. Tellus vitae arcu dignissim massa aliquam vel tellus. Ipsum massa arcu nulla sed purus in ac.
-                    </p>
-                    <time>22 Agosto 2022</time>
-                </div>
-
-                <div class="card item_4">
-                    <img src="./assets/ultrawide.svg" alt="Várias telas de computador">
-                    <header>
-                        <p>produtividade</p>
-                        <h3>2 monitores ou 1 ultrawide?</h3>
-                        <p>By Fulano da Silva</p>
-                    </header>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur. Arcu tellus adipiscing sagittis tristique. Eget molestie posuere enim pretium venenatis nunc ligula donec a. Velit senectus amet nulla.
-                    </p>
-                    <time>22 Agosto 2022</time>
-                </div>
+                    <ul>
+                        <li><a href=""><div>> saúde</div>(1)</a></li>
+                        <li><a href=""><div>> desenvolvimento</div>(2)</a></li>
+                        <li><a href=""><div>> produtividade</div>(2)</a></li>
+                        <li><a href=""><div>> opinião</div>(1)</a></li>
+                    </ul>
+                </section>
             </div>
-        </section>        
-    </div>
-
-    <div class="container">
-        <section id="pop">
-            <header>
-                <h2>Posts populares</h2>
-            </header>
-
-            <div class="micro_card pop_1">
-                <img src="./assets/development.svg" alt="Pessoa no desktop">
-                <h4>Desevolvimento atual</h4>
-                <time>22 Agosto 2022</time>
-            </div>
-
-            <div class="micro_card pop_2">
-                <img src="./assets/git.svg" alt="Logo GitLab">
-                <h4>GitLab vs GitHub</h4>
-                <time>22 Agosto 2022</time>
-            </div>
-
-            <div class="micro_card pop_3">
-                <img src="./assets/coffee.svg" alt="Café">
-                <h4>Café atrapalha?</h4>
-                <time>22 Agosto 2022</time>
-            </div>
-        </section>
-
-        <section id="categories">
-            <ul>
-                <li><a href="">saúde (1)</a></li>
-                <li><a href="">desenvolvimento (2)</a></li>
-                <li><a href="">produtividade (2)</a></li>
-                <li><a href="">opinião (1)</a></li>
-            </ul>
-        </section>
-    </div>
-
-    <footer class="container">
-        <p>Copyright@The Dev News</p>
-    </footer>
-</body>
+        </div>
+        <footer>
+            <p>Copyright@The Dev News</p>
+        </footer>
+    </body>
 </html>
