@@ -46,24 +46,40 @@ nav > div > a {
 }
 
 #grid_container > a > main {
-    color: white;
-    width: 74.4rem;
-    height: 39rem;
-    background-image: 
-        linear-gradient(0deg,rgba(2, 2, 3, 0.97) 0%, rgba(32, 32, 32, 0.8) 30%, rgba(209, 141, 141, 0.11) 100%),
-        url(./assets/main.png);
-    background-repeat: no-repeat, no-repeat;
-    background-size: cover;
-    border-radius: 1rem;
-    background-position: bottom, center;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+#grid_container > a > main > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 39.6rem;
+  object-fit: cover;
+}
+
+#grid_container > a > main > #overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(2, 2, 3, 0.97) 0%,
+    rgba(32, 32, 32, 0.8) 30%,
+    rgba(209, 141, 141, 0.11) 100%
+  );
 }
 
 #grid_container > a > main > header {
-    box-sizing: border-box;
-    width: 95%;
-    position: relative;
-    top: 29rem;
-    left: 2.4rem;
+  position: absolute;
+  bottom: 2rem;
+  left: 1.6rem;
+  color: white;
+  width: 80%;
+  z-index: 2;
 }
 
 #grid_container > a > main > header > p {
@@ -119,6 +135,7 @@ h2 {
 
 .card > img {
     flex: 1;
+    display: block;
     border-radius: 1.6rem 1.6rem 0 0;
 }
 
@@ -169,7 +186,7 @@ h2 {
 #right_column {
     display: grid;
     gap: 2.4rem;
-    grid-template-rows: 39rem 1fr;
+    grid-template-rows: 39.6rem 1fr;
 }
 
 #right_column > section > header {
@@ -189,8 +206,7 @@ h2 {
 #pop > div {
     flex: 1;
     display: grid;
-    gap: 1.4rem;
-    grid-template-rows: repeat(3, 1fr);
+    align-content: space-between;
 
 }
 
@@ -245,64 +261,21 @@ h2 {
 footer {
     display: flex;
     justify-content: center;
+    padding: 1.4rem;
     background-color: #02A28F;
     font-size: 1.4rem;
     font-weight: 500;
     color: white;
 }
 
-/*@media only screen and (max-width: 767px) {
-    nav {
-        display: flex;
-    }
+footer > p {
+    margin: auto;
+}
 
-    nav > div {
-        align-self: center;
-    }
-
-    #body_container {
-        display: flex;
-        flex-direction: column;
-        padding: 2.4rem 0.8rem;
-        max-width: 76.7rem;
-        margin: auto;
-    }
-
-    #grid_container > .no_decoration {
-        margin: auto;
-    }
-
-    #grid_container > a > main {
-        max-width: fit-content;
-    }
-
-    #grid_container > a > main > header {
-        width: 60%;
-        top: 25rem;
-    }
-
-    h1 {
-        font-size: 2.4rem;        
-    }
-
-    #recents_cards {
-        gap: 1.8rem;
-        grid-template-columns: 1fr;
-    }
-    
-    #recents_cards > .no_decoration {
-        margin: auto;
-    }
-
-    .card > img {
-        width: fit-content;
-    }
-
-}*/
 
 @media only screen and (max-width: 767px) {
     html {
-        font-size: 9px; /* reduz base geral */
+        font-size: 9px;
     }
 
     nav {
@@ -320,7 +293,6 @@ footer {
         display: flex;
         flex-direction: column;
         padding: 2.4rem 1rem;
-        gap: 2rem;
     }
 
     #grid_container {
@@ -332,22 +304,16 @@ footer {
     }
 
     #grid_container > a > main {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 9; /* Mantém formato widescreen responsivo */
-        background-size: cover;
-        background-position: center;
-        border-radius: 1rem;
-        position: relative; /* Necessário pro header absoluto funcionar */
+        border-radius: 0.8rem;
+    }
+    #grid_container > a > main > img {
+        min-height: 39.6rem;
     }
 
     #grid_container > a > main > header {
-        position: absolute;
-        bottom: 2rem;
-        left: 1.6rem;
-        width: 80%;
-        top: auto; /* garante que top fixo não interfira */
+        left: 1.2rem;
+        bottom: 1.2rem;
+        width: 85%;
     }
 
     h1 {
@@ -355,47 +321,58 @@ footer {
         line-height: 1.2;
     }
 
-    #recents_header {
+    #grid_container > a > main > header > p {
+        font-size: 1.4rem;
+    }
+
+    #recents {
+        width: 100%;
+        display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 0.8rem;
-        padding: 1.2rem;
+        align-items: center;
+    }
+
+    #recents_header {
+        width: 100%;
+        max-width: 36rem;
+        padding: 1rem;
+        margin-bottom: 2rem;
     }
 
     #recents_cards {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    #recents_cards > .no_decoration {
+        margin: auto;
     }
 
     .card {
         width: 100%;
-        height: auto;
+        max-width: 36rem;
     }
 
     .card > img {
+        flex: 0;
         width: 100%;
-        height: auto;
-        border-radius: 1.6rem 1.6rem 0 0;
     }
 
     #right_column {
+        width: 100%;
+        max-width: 36rem;
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 2.4rem;
+        margin: auto;
     }
 
-    .micro_card {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .micro_card > div {
-        padding-left: 0;
-    }
-
-    footer {
-        font-size: 1.2rem;
-        padding: 1rem;
+    #right_column > #pop > header, #right_column > #categories > header{
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -419,7 +396,6 @@ footer {
     }
 
     #grid_container > a > main > header {
-        top: 25rem;
         left: 2.2rem;
     }
 
